@@ -1,0 +1,120 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String    @id
+  username     String    @unique
+  passwordHash String
+  displayName  String
+  email        String
+  phone        String
+  department   String
+  status       String    @default("enabled")
+  roleIds      Json
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  sessions     Session[]
+}
+
+model Role {
+  id              String   @id
+  name            String
+  permissionCodes Json
+  menuIds         Json
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model Menu {
+  id         String   @id
+  parentId   String?
+  name       String
+  title      String
+  path       String
+  component  String?
+  permission String?
+  type       String
+  icon       String?
+  hidden     Boolean  @default(false)
+  sort       Int      @default(0)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model ProductCategory {
+  id        String    @id
+  name      String
+  status    String    @default("enabled")
+  sort      Int       @default(0)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  products  Product[]
+}
+
+model Product {
+  id               String            @id
+  name             String
+  sku              String            @unique
+  categoryId       String
+  category         ProductCategory   @relation(fields: [categoryId], references: [id])
+  price            Decimal           @db.Decimal(10, 2)
+  costPrice        Decimal           @db.Decimal(10, 2)
+  stock            Int               @default(0)
+  sales            Int               @default(0)
+  status           String            @default("draft")
+  cover            String
+  description      String            @db.Text
+  createdBy        String?
+  updatedBy        String?
+  remark           String?
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+  inventoryRecords InventoryRecord[]
+}
+
+model InventoryRecord {
+  id           String   @id @default(cuid())
+  productId    String
+  product      Product  @relation(fields: [productId], references: [id])
+  change       Int
+  reason       String
+  operatorName String
+  createdAt    DateTime @default(now())
+}
+
+model Order {
+  id           String   @id
+  orderNo      String   @unique
+  customerName String
+  amount       Decimal  @db.Decimal(10, 2)
+  status       String
+  remark       String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model OperationLog {
+  id           String   @id @default(cuid())
+  action       String
+  module       String
+  operatorId   String
+  operatorName String
+  detail       String   @db.Text
+  ip           String
+  createdAt    DateTime @default(now())
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id])
+  accessToken  String   @unique
+  refreshToken String   @unique
+  createdAt    DateTime @default(now())
+}

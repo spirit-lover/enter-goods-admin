@@ -1,0 +1,260 @@
+:root {
+  color: #1f2937;
+  background: #eef2f7;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.12), transparent 32%),
+    linear-gradient(180deg, #f6f8fb 0%, #eef2f7 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.app-shell__aside {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 12px;
+  background: linear-gradient(180deg, #132238 0%, #1f3b5b 100%);
+  color: #fff;
+}
+
+.app-shell__brand {
+  padding: 0 12px 20px;
+}
+
+.app-shell__brand-title {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.app-shell__brand-subtitle {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.app-shell__menu {
+  border-right: none;
+}
+
+.app-shell__menu.el-menu {
+  background-color: transparent;
+}
+
+.app-shell__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
+  padding: 20px 28px;
+  background: rgba(255, 255, 255, 0.86);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.app-shell__headline {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.app-shell__subline {
+  margin-top: 4px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.app-shell__main {
+  padding: 28px;
+}
+
+.page-view {
+  display: grid;
+  gap: 20px;
+}
+
+.page-view__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.page-view__header h2,
+.page-block__title,
+.login-panel__header h1,
+.login-page__copy h2 {
+  margin: 0;
+}
+
+.page-view__header p,
+.login-panel__header p,
+.login-page__copy p,
+.timeline-entry__detail {
+  margin: 8px 0 0;
+  color: #6b7280;
+}
+
+.page-actions,
+.table-toolbar,
+.page-summary {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.page-block {
+  border: none;
+  border-radius: 18px;
+}
+
+.dashboard-grid {
+  margin: 0;
+}
+
+.metric-card {
+  border-radius: 18px;
+}
+
+.metric-card--warn {
+  background: linear-gradient(180deg, #fff7ed 0%, #ffedd5 100%);
+}
+
+.timeline-entry__title {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+}
+
+.login-page__hero {
+  width: min(1120px, 100%);
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(360px, 420px);
+  gap: 32px;
+  align-items: center;
+}
+
+.login-page__copy {
+  display: grid;
+  gap: 18px;
+}
+
+.login-page__copy h2 {
+  font-size: clamp(34px, 5vw, 52px);
+  line-height: 1.12;
+  color: #0f172a;
+}
+
+.login-page__feature-list {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.login-panel {
+  border: none;
+  border-radius: 24px;
+}
+
+.login-panel__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.login-panel__alert + .login-panel__alert {
+  margin-top: 12px;
+}
+
+.login-panel__submit {
+  width: 100%;
+  margin-top: 8px;
+}
+
+@media (max-width: 960px) {
+  .app-shell__header {
+    padding: 18px 20px;
+  }
+
+  .app-shell__main {
+    padding: 20px;
+  }
+
+  .login-page__hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-shell__aside {
+    width: 100% !important;
+  }
+
+  .page-view__header,
+  .app-shell__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .login-page {
+    padding: 20px;
+  }
+}
+
+.page-actions--end {
+  justify-content: flex-end;
+}
+
+.page-block__footer {
+  margin-top: 16px;
+}
+
+.table-toolbar {
+  margin-bottom: 18px;
+}
+
+.table-toolbar__actions {
+  align-self: flex-end;
+}
+
+.tree-node {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.tree-node__title {
+  color: #1f2937;
+}
