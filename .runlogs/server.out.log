@@ -1,0 +1,30 @@
+[32m[Nest] 27608  - [39m2026/03/26 11:48:42 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +39ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/auth}:[39m[38;5;3m +42ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/login, POST} route[39m[38;5;3m +6ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/refresh, POST} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/logout, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/profile, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPermissionController {/permissions}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/permissions/menus, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/permissions/codes, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mProductController {/products}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/products, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/products/categories, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/products/inventory/records, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/products/orders, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/products/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/products, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/products/:id, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/products/:id/status, PATCH} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/products/inventory/adjust, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/products/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mDashboardController {/dashboard}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/dashboard/summary, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mSystemController {/system}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/system/users, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/system/roles, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/system/menus, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/system/logs, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/system/settings, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 27608  - [39m2026/03/26 11:48:43 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +4ms[39m
